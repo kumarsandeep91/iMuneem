@@ -41,7 +41,6 @@ namespace Russet.iMuneem.Communications
         public virtual IList<State> States { get; set; }
         public virtual IList<Currency> Currencies { get; set; }
         public virtual IList<Company> Companies { get; set; }
-        public virtual IList<Address> Addresses { get; set; }
         #endregion
     }
 }

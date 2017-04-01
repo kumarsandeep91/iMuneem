@@ -7,7 +7,7 @@ namespace Russet.iMuneem.Categories
 {
     public class Category : DomainObject
     {
-        public Guid CompanyID { get; set; }
+        //public Guid CompanyID { get; set; }
         public Guid TypeID { get; set; }
         public string Name { get; set; }
         public string Alias { get; set; }
@@ -29,7 +29,7 @@ namespace Russet.iMuneem.Categories
         #region Navigation Properties
         public virtual CategoryType Type { get; set; }
         public virtual IList<Group> Groups { get; set; }
-        public virtual Company Company { get; set; }
+        //public virtual Company Company { get; set; }
         #endregion
     }
 }

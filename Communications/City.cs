@@ -25,9 +25,8 @@ namespace Russet.iMuneem.Communications
 
         #region Navigation Properties
         public virtual IList<ZipCode> ZipCodes { get; set; }
-        public virtual IList<Address> Addresses { get; set; }
-        public virtual IList<Company> Companies { get; set; }
         public virtual State State { get; set; }
+        public virtual IList<Company> Companies { get; set; }
         #endregion
     }
 }

@@ -7,12 +7,10 @@ namespace Russet.iMuneem.Transactions
 {
     public class Voucher : DomainObject
     {
-        public Guid CompanyID { get; set; }
         public Guid TypeID { get; set; }
-        public Guid? NumberingID { get; set; }
 
         public string Name { get; set; }
-        public string Narration { get; set; }
+        public string Alias { get; set; }
 
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.
@@ -28,9 +26,7 @@ namespace Russet.iMuneem.Transactions
 
         #region Navigation Properties
         public virtual VoucherType Type { get; set; }
-        public virtual VoucherNumbering Numbering { get; set; }
-        public virtual IList<VoucherConfiguration> Configurations { get; set; }
-        public virtual Company Company { get; set; }
+        //public virtual IList<VoucherConfiguration> Configurations { get; set; }
         #endregion
     }
 }

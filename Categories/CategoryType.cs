@@ -7,8 +7,8 @@ namespace Russet.iMuneem.Categories
 {
     public class CategoryType : DomainObject
     {
-        public Guid CompanyID { get; set; }
-        public string Type { get; set; }
+        //public Guid CompanyID { get; set; }
+        public string Name { get; set; }
 
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.
@@ -24,7 +24,7 @@ namespace Russet.iMuneem.Categories
 
         #region Navigation Properties
         public virtual IList<Category> Categories { get; set; }
-        public virtual Company Company { get; set; }
+        //public virtual Company Company { get; set; }
         #endregion
     }
 }

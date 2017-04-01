@@ -5,15 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Russet.iMuneem.Communications
+namespace Russet.iMuneem.Inventories
 {
-    public class ContactType : DomainObject
+    public class ProductCategory : DomainObject
     {
-        ///<summary>
-        /// Gets or sets the name of contact type.
-        /// </summary>
-        /// <value>The name.</value>
         public string Name { get; set; }
+        public string Description { get; set; }
 
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.
@@ -23,12 +20,12 @@ namespace Russet.iMuneem.Communications
         {
             get
             {
-                return Validate<ContactType>();
+                return Validate<ProductCategory>();
             }
         }
 
-        #region Navigation Properties
-        public virtual IList<Contact> Contacts { get; set; }
+        #region navigation
+        public virtual IList<Product> Products { get; set; }
         #endregion
     }
 }

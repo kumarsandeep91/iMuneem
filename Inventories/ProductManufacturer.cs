@@ -1,12 +1,12 @@
 ﻿using Russet.iMuneem.Base;
 using System;
+using System.Collections.Generic;
 
-namespace Russet.iMuneem.Finance
+namespace Russet.iMuneem.Inventories
 {
-    public class FinancialBook : DomainObject
+    public class ProductManufacturer : DomainObject
     {
-        public DateTime Starting { get; set; }
-        public DateTime? Ending { get; set; }
+        public Guid ProductID { get; set; }
 
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.
@@ -16,12 +16,13 @@ namespace Russet.iMuneem.Finance
         {
             get
             {
-                return Validate<FinancialBook>();
+                return Validate<ProductManufacturer>();
             }
         }
 
-        #region Navigation Properties
-        public virtual FinancialYear FinancialYear { get; set; }
+        #region navigation
+        public virtual Product Product { get; set; }
+        public virtual IList<ProductVersion> ProductVersions { get; set; }
         #endregion
     }
 }
