@@ -5,11 +5,11 @@ using System.Collections.Generic;
 
 namespace Russet.iMuneem.Medical.Patients
 {
-    public class Patient : DomainObject
+    public class Patient : Person
     {
-        public string Name { get; set; }
-        public string Gender { get; set; }
-        public string Age { get; set; }
+        // used as patient id for various purposes. its unique.
+        public long PatientNumber { get; set; }
+        public string FatherOrHusbandName { get; set; }
 
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.
@@ -25,6 +25,7 @@ namespace Russet.iMuneem.Medical.Patients
 
         #region navigation
         public virtual IList<PatientReport> PatientReports { get; set; }
+        public virtual IList<PatientRegistration> Registrations { get; set; }
         #endregion
     }
 }

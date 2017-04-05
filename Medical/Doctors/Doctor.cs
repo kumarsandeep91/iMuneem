@@ -1,18 +1,11 @@
-﻿using Russet.iMuneem.Base;
-using Russet.iMuneem.General.People;
+﻿using Russet.iMuneem.General.People;
 using Russet.iMuneem.Medical.Laboratory;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Russet.iMuneem.Medical.Doctors
 {
-    public class Doctor : DomainObject
+    public class Doctor : Person
     {
-        public string Name { get; set; }
-        public string Gender { get; set; }
         public string Department { get; set; }
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.

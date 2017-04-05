@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Russet.iMuneem.Medical.Patients;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Russet.iMuneem.General.People.Employees
@@ -91,6 +92,8 @@ namespace Russet.iMuneem.General.People.Employees
         /// </summary>
         /// <value>The user logs.</value>
         public virtual IList<UserLog> UserLogs { get; set; }
+        // A user can create multiple patient registrations.
+        public virtual IList<PatientRegistration> PatientRegistrations { get; set; }
         #endregion
     }
 }

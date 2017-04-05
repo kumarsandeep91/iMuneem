@@ -90,6 +90,9 @@
     <Compile Include="Medical\Laboratory\TestResult.cs" />
     <Compile Include="Medical\Laboratory\TestUnit.cs" />
     <Compile Include="Medical\Patients\Patient.cs" />
+    <Compile Include="Medical\Patients\PatientRegistration.cs" />
+    <Compile Include="Medical\Services\Service.cs" />
+    <Compile Include="Medical\Services\ServiceCategory.cs" />
     <Compile Include="Organization\Company.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\Test.Designer.cs">
