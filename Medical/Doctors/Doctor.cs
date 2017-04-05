@@ -1,17 +1,19 @@
 ﻿using Russet.iMuneem.Base;
+using Russet.iMuneem.General.People;
+using Russet.iMuneem.Medical.Laboratory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Russet.iMuneem.Medical.Laboratory
+namespace Russet.iMuneem.Medical.Doctors
 {
-    public class Test : DomainObject
+    public class Doctor : DomainObject
     {
-        public string Code { get; set; }
         public string Name { get; set; }
-
+        public string Gender { get; set; }
+        public string Department { get; set; }
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.
         /// </summary>
@@ -20,15 +22,12 @@ namespace Russet.iMuneem.Medical.Laboratory
         {
             get
             {
-                return Validate<Test>();
+                return Validate<Doctor>();
             }
         }
 
         #region navigation
-        public virtual TestResult TestResult { get; set; }
-        public virtual IList<TestRange> Ranges { get; set; }
-        public virtual IList<TestUnit> Units { get; set; }
-        public virtual IList<Report> Reports { get; set; }
+        public virtual IList<PatientReport> PatientReports { get; set; }
         #endregion
     }
 }

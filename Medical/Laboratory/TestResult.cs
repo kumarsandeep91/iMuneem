@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Russet.iMuneem.Medical.Laboratory
 {
-    public class Test : DomainObject
+    public class TestResult : DomainObject
     {
-        public string Code { get; set; }
-        public string Name { get; set; }
+        public Guid ReportResultID { get; set; }
+        public string Result { get; set; }
 
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.
@@ -20,15 +20,13 @@ namespace Russet.iMuneem.Medical.Laboratory
         {
             get
             {
-                return Validate<Test>();
+                return Validate<TestResult>();
             }
         }
 
         #region navigation
-        public virtual TestResult TestResult { get; set; }
-        public virtual IList<TestRange> Ranges { get; set; }
-        public virtual IList<TestUnit> Units { get; set; }
-        public virtual IList<Report> Reports { get; set; }
+        public virtual Test Test { get; set; }
+        public virtual ReportResult ReportResult { get; set; }
         #endregion
     }
 }
