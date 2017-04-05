@@ -67,6 +67,8 @@
     <Compile Include="Finance\Currency.cs" />
     <Compile Include="Finance\FinancialYear.cs" />
     <Compile Include="General\People\Gender.cs" />
+    <Compile Include="General\People\MaritalStatus.cs" />
+    <Compile Include="General\People\Person.cs" />
     <Compile Include="Inventories\Product.cs" />
     <Compile Include="Inventories\ProductBatch.cs" />
     <Compile Include="Inventories\ProductCategory.cs" />

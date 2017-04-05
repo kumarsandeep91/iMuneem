@@ -1,12 +1,20 @@
 ﻿using Russet.iMuneem.Base;
-using Russet.iMuneem.Medical.Laboratory;
 using System.Collections.Generic;
 
 namespace Russet.iMuneem.General.People
 {
-    public class Gender : DomainObject
+    public class MaritalStatus : DomainObject
     {
+        ///<summary>
+        /// Gets or sets the name of Marital Status.
+        /// </summary>
+        /// <value>The Name of Marital Status.</value>
         public string Name { get; set; }
+
+        ///<summary>
+        /// Gets or sets the description of Marital Status.
+        /// </summary>
+        /// <value>The Description of Marital Status.</value>
         public string Description { get; set; }
 
         ///<summary>
@@ -17,12 +25,11 @@ namespace Russet.iMuneem.General.People
         {
             get
             {
-                return Validate<Gender>();
+                return Validate<MaritalStatus>();
             }
         }
 
         #region navigation
-        public virtual IList<AgeGroup> AgeGroups { get; set; }
         public virtual IList<Person> Persons { get; set; }
         #endregion
     }
