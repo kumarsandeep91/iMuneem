@@ -66,6 +66,10 @@
     <Compile Include="Communications\ZipCode.cs" />
     <Compile Include="Finance\Currency.cs" />
     <Compile Include="Finance\FinancialYear.cs" />
+    <Compile Include="General\People\Employees\Employee.cs" />
+    <Compile Include="General\People\Employees\Role.cs" />
+    <Compile Include="General\People\Employees\User.cs" />
+    <Compile Include="General\People\Employees\UserLog.cs" />
     <Compile Include="General\People\Gender.cs" />
     <Compile Include="General\People\MaritalStatus.cs" />
     <Compile Include="General\People\Person.cs" />
@@ -125,6 +129,7 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
