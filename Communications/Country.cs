@@ -10,21 +10,6 @@ namespace Russet.iMuneem.Communications
         public string Name { get; set; }
         public string Code { get; set; }
 
-        public Currency DefaultCurrency
-        {
-            get
-            {
-                if(Currencies != null)
-                    foreach(Currency curr in Currencies)
-                    {
-                        if (curr.IsDefault)
-                            return curr;
-                        return null;
-                    }
-                return null;
-            }
-        }
-
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.
         /// </summary>
@@ -40,7 +25,8 @@ namespace Russet.iMuneem.Communications
         #region Navigation Properties
         public virtual IList<State> States { get; set; }
         public virtual IList<Currency> Currencies { get; set; }
-        public virtual IList<Company> Companies { get; set; }
+
+        public virtual IList<Address> Addresses { get; set; }
         #endregion
     }
 }

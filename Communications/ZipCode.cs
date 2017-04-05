@@ -25,7 +25,8 @@ namespace Russet.iMuneem.Communications
 
         #region Navigation Properties
         public virtual City City { get; set; }
-        public virtual IList<Company> Companies { get; set; }
+
+        public virtual IList<Address> Addresses { get; set; }
         #endregion
     }
 }
