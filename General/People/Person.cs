@@ -10,6 +10,7 @@ namespace Russet.iMuneem.General.People
     public abstract class Person : DomainObject
     {
         public Guid? GenderID { get; set; }
+        public Guid? BloodGroupID { get; set; }
         public Guid? MaritalStatusID { get; set; }
 
         ///<summary>
@@ -74,6 +75,7 @@ namespace Russet.iMuneem.General.People
 
         #region navigation
         public virtual Gender Gender { get; set; }
+        public virtual BloodGroup BloodGroup { get; set; }
         public virtual MaritalStatus MaritalStatus { get; set; }
         #endregion
     }

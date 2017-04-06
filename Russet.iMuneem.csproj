@@ -66,6 +66,7 @@
     <Compile Include="Communications\ZipCode.cs" />
     <Compile Include="Finance\Currency.cs" />
     <Compile Include="Finance\FinancialYear.cs" />
+    <Compile Include="General\People\BloodGroup.cs" />
     <Compile Include="General\People\Employees\Employee.cs" />
     <Compile Include="General\People\Employees\Role.cs" />
     <Compile Include="General\People\Employees\User.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Inventories\ProductVersion.cs" />
     <Compile Include="Ledgers\Account.cs" />
     <Compile Include="Medical\Doctors\Doctor.cs" />
+    <Compile Include="Medical\Doctors\DoctorFees.cs" />
     <Compile Include="Medical\Laboratory\AgeGroup.cs" />
     <Compile Include="Medical\Laboratory\PatientReport.cs" />
     <Compile Include="Medical\Laboratory\Report.cs" />
@@ -90,6 +92,7 @@
     <Compile Include="Medical\Laboratory\TestResult.cs" />
     <Compile Include="Medical\Laboratory\TestUnit.cs" />
     <Compile Include="Medical\Patients\Patient.cs" />
+    <Compile Include="Medical\Patients\PatientCharge.cs" />
     <Compile Include="Medical\Patients\PatientRegistration.cs" />
     <Compile Include="Medical\Services\Service.cs" />
     <Compile Include="Medical\Services\ServiceCategory.cs" />

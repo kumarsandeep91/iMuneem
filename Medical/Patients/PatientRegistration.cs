@@ -2,9 +2,6 @@
 using Russet.iMuneem.General.People.Employees;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Russet.iMuneem.Medical.Patients
 {
@@ -32,6 +29,7 @@ namespace Russet.iMuneem.Medical.Patients
         public virtual Patient Patient { get; set; }
         // only registered user can register a patient.
         public virtual User RegisteredBy { get; set; }
+        public virtual IList<PatientCharge> PatientCharges { get; set; }
         #endregion
     }
 }

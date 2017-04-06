@@ -1,12 +1,16 @@
-﻿using Russet.iMuneem.General.People;
-using Russet.iMuneem.Medical.Laboratory;
+﻿using Russet.iMuneem.Base;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Russet.iMuneem.Medical.Doctors
 {
-    public class Doctor : Person
+    public class DoctorFees : DomainObject
     {
-        public string Department { get; set; }
+        public Guid DoctorID { get; set; }
+        public double Fees { get; set; }
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.
         /// </summary>
@@ -20,8 +24,7 @@ namespace Russet.iMuneem.Medical.Doctors
         }
 
         #region navigation
-        public virtual IList<PatientReport> PatientReports { get; set; }
-        public virtual IList<DoctorFees> DoctorFeesList { get; set; }
+        public virtual Doctor Doctor { get; set; }
         #endregion
     }
 }
