@@ -5,11 +5,11 @@ namespace Russet.iMuneem.Medical.Services
 {
     public class Service : DomainObject
     {
-        public Guid CategoryID { get; set; }
+        public Guid? CategoryID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public double Cost { get; }
+        public double Cost { get; set; }
 
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.

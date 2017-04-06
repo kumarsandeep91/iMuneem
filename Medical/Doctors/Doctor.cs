@@ -1,6 +1,7 @@
 ﻿using Russet.iMuneem.General.People;
 using Russet.iMuneem.Medical.Laboratory;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Russet.iMuneem.Medical.Doctors
 {
@@ -16,6 +17,25 @@ namespace Russet.iMuneem.Medical.Doctors
             get
             {
                 return Validate<Doctor>();
+            }
+        }
+
+        ///<summary>
+        /// Adds the fees.
+        /// </summary>
+        /// <param name="contact">The fees.</param>
+        public void AddFees(DoctorFees fees)
+        {
+            if (DoctorFeesList == null)
+            {
+                DoctorFeesList = new List<DoctorFees>();
+            }
+
+            // If the fees is not already in the list
+            if (!DoctorFeesList.Any(x => x.PrimaryKey == fees.PrimaryKey))
+            {
+                DoctorFeesList.Add(fees);
+                fees.Doctor = this;
             }
         }
 
