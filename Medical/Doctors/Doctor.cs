@@ -1,5 +1,6 @@
 ﻿using Russet.iMuneem.General.People;
 using Russet.iMuneem.Medical.Laboratory;
+using Russet.iMuneem.Medical.Patients;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -42,6 +43,7 @@ namespace Russet.iMuneem.Medical.Doctors
         #region navigation
         public virtual IList<PatientReport> PatientReports { get; set; }
         public virtual IList<DoctorFees> DoctorFeesList { get; set; }
+        public virtual IList<PatientCharge> PatientCharges { get; set; }
         #endregion
     }
 }

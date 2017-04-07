@@ -1,4 +1,5 @@
 ﻿using Russet.iMuneem.Base;
+using Russet.iMuneem.Medical.Doctors;
 using System;
 
 namespace Russet.iMuneem.Medical.Patients
@@ -6,8 +7,10 @@ namespace Russet.iMuneem.Medical.Patients
     public class PatientCharge : DomainObject
     {
         public Guid RegistrationID { get; set; }
+        public Guid DoctorID { get; set; }
         public string ChargeName { get; set; }
         public double Cost { get; set; }
+        public double DoctorInsentive { get; set; }
         public string Status { get; set; }
 
         ///<summary>
@@ -24,6 +27,7 @@ namespace Russet.iMuneem.Medical.Patients
 
         #region navigation
         public virtual PatientRegistration PatientRegistration { get; set; }
+        public virtual Doctor Doctor { get; set; }
         #endregion
     }
 }

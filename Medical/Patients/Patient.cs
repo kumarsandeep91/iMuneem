@@ -23,6 +23,8 @@ namespace Russet.iMuneem.Medical.Patients
             }
         }
 
+        
+
         #region navigation
         public virtual IList<PatientReport> PatientReports { get; set; }
         public virtual IList<PatientRegistration> Registrations { get; set; }

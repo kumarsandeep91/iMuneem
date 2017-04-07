@@ -2,6 +2,7 @@
 using Russet.iMuneem.General.People.Employees;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Russet.iMuneem.Medical.Patients
 {
@@ -22,6 +23,25 @@ namespace Russet.iMuneem.Medical.Patients
             get
             {
                 return Validate<PatientRegistration>();
+            }
+        }
+
+        ///<summary>
+        /// Adds the fees.
+        /// </summary>
+        /// <param name="contact">The fees.</param>
+        public void AddCharges(PatientCharge charges)
+        {
+            if (PatientCharges == null)
+            {
+                PatientCharges = new List<PatientCharge>();
+            }
+
+            // If the fees is not already in the list
+            if (!PatientCharges.Any(x => x.PrimaryKey == charges.PrimaryKey))
+            {
+                PatientCharges.Add(charges);
+                charges.PatientRegistration = this;
             }
         }
 
