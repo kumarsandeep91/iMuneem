@@ -1,5 +1,6 @@
 ﻿using Russet.iMuneem.Base;
 using Russet.iMuneem.General.People.Employees;
+using Russet.iMuneem.Medical.Doctors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace Russet.iMuneem.Medical.Patients
     {
         public Guid PatientID { get; set; }
         public Guid UserID { get; set; }
+        public Guid DoctorID { get; set; }
         public long RegistrationNumber { get; set; }
         public DateTime RegistrationDate { get; set; }
         public int Validity { get; set; }
@@ -49,6 +51,7 @@ namespace Russet.iMuneem.Medical.Patients
         public virtual Patient Patient { get; set; }
         // only registered user can register a patient.
         public virtual User RegisteredBy { get; set; }
+        public virtual Doctor Doctor { get; set; }
         public virtual IList<PatientCharge> PatientCharges { get; set; }
         #endregion
     }

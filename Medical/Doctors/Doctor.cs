@@ -44,6 +44,7 @@ namespace Russet.iMuneem.Medical.Doctors
         public virtual IList<PatientReport> PatientReports { get; set; }
         public virtual IList<DoctorFees> DoctorFeesList { get; set; }
         public virtual IList<PatientCharge> PatientCharges { get; set; }
+        public virtual IList<PatientRegistration> PatientRegistrations { get; set; }
         #endregion
     }
 }

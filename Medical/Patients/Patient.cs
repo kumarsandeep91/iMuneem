@@ -2,6 +2,7 @@
 using Russet.iMuneem.General.People;
 using Russet.iMuneem.Medical.Laboratory;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Russet.iMuneem.Medical.Patients
 {
@@ -23,7 +24,24 @@ namespace Russet.iMuneem.Medical.Patients
             }
         }
 
-        
+        ///<summary>
+        /// Adds the registration.
+        /// </summary>
+        /// <param name="reg">The reg.</param>
+        public void AddRegistration(PatientRegistration reg)
+        {
+            if (Registrations == null)
+            {
+                Registrations = new List<PatientRegistration>();
+            }
+
+            // If the fees is not already in the list
+            if (!Registrations.Any(x => x.PrimaryKey == reg.PrimaryKey))
+            {
+                Registrations.Add(reg);
+                reg.Patient = this;
+            }
+        }
 
         #region navigation
         public virtual IList<PatientReport> PatientReports { get; set; }
