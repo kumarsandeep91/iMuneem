@@ -5,15 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Russet.iMuneem.Communications
+namespace Russet.iMuneem.Medical.Laboratory
 {
-    public class AddressType : DomainObject
+    public class TestResult : DomainObject
     {
-        ///<summary>
-        /// Gets or sets the name of contact type.
-        /// </summary>
-        /// <value>The name.</value>
-        public string Name { get; set; }
+        public Guid ReportResultID { get; set; }
+        public string Result { get; set; }
 
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.
@@ -23,11 +20,13 @@ namespace Russet.iMuneem.Communications
         {
             get
             {
-                return Validate<AddressType>();
+                return Validate<TestResult>();
             }
         }
 
-        // Navigation Property
-        public virtual IList<Address> Addresses { get; set; }
+        #region navigation
+        public virtual Test Test { get; set; }
+        public virtual ReportResult ReportResult { get; set; }
+        #endregion
     }
 }

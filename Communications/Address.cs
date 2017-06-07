@@ -1,27 +1,17 @@
 ﻿using Russet.iMuneem.Base;
-using Russet.iMuneem.Organization;
 using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace Russet.iMuneem.Communications
 {
     public class Address : DomainObject
     {
-        /*
-         * ID's for relationships in database tables.
-         */
-        public Guid? CompanyID { get; set; }
-        public Guid? TypeID { get; set; }
         public Guid? CountryID { get; set; }
         public Guid? StateID { get; set; }
         public Guid? CityID { get; set; }
         public Guid? ZipCodeID { get; set; }
 
-        /// <summary>
-        /// Gets or sets the address line1.
-        /// </summary>
-        /// <value>The address line1.</value>
-        [Required(ErrorMessage = "The AddressLine1 is a mandatory field")]
+        public Guid? AddressTypeID { get; set; }
+
         public string AddressLine1 { get; set; }
 
         /// <summary>
@@ -50,14 +40,13 @@ namespace Russet.iMuneem.Communications
             }
         }
 
-        #region Navigation Properties
-        public virtual Company Company { get; set; }
-        public virtual AddressType Type { get; set; }
+        #region navigation
         public virtual Country Country { get; set; }
         public virtual State State { get; set; }
         public virtual City City { get; set; }
         public virtual ZipCode ZipCode { get; set; }
 
+        public virtual AddressType Type { get; set; }
         #endregion
     }
 }

@@ -34,6 +34,7 @@ namespace Russet.iMuneem.Organization
         }
 
         #region Methods
+        /*
         ///<summary>
         ///Gets the default contact.
         /// </summary>
@@ -171,7 +172,7 @@ namespace Russet.iMuneem.Organization
                 Addresses.FirstOrDefault().IsDefault = true;
             }
         }
-
+        */
         ///<summary>
         /// Adds the financial year.
         /// </summary>
@@ -227,21 +228,12 @@ namespace Russet.iMuneem.Organization
         #endregion
 
         #region Navigation Properties
-        public virtual IList<Address> Addresses { get; set; }
-        public virtual IList<Contact> Contacts { get; set; }
         public virtual Currency Currency { get; set; }
         public virtual Country Country { get; set; }
         public virtual State State { get; set; }
         public virtual City City { get; set; }
         public virtual ZipCode ZipCode { get; set; }
         public virtual IList<FinancialYear> FinancialYears { get; set; }
-
-        public virtual IList<Category> Categories { get; set; }
-        public virtual IList<CategoryType> CategoryTypes { get; set; }
-        public virtual IList<Group> Groups { get; set; }
-        public virtual IList<Account> Accounts { get; set; }
-        public virtual IList<Voucher> Vouchers { get; set; }
-        public virtual IList<VoucherType> VoucherTypes { get; set; }
 
         #endregion
     }

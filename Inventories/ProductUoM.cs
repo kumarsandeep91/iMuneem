@@ -1,16 +1,18 @@
 ﻿using Russet.iMuneem.Base;
-using Russet.iMuneem.Organization;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Russet.iMuneem.Transactions
+namespace Russet.iMuneem.Inventories
 {
-    public class Voucher : DomainObject
+    public class ProductUoM : DomainObject
     {
-        public Guid TypeID { get; set; }
+        public Guid ProductID { get; set; }
 
         public string Name { get; set; }
-        public string Alias { get; set; }
+        public string Description { get; set; }
 
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.
@@ -20,13 +22,13 @@ namespace Russet.iMuneem.Transactions
         {
             get
             {
-                return Validate<Voucher>();
+                return Validate<ProductUoM>();
             }
         }
 
-        #region Navigation Properties
-        public virtual VoucherType Type { get; set; }
-        //public virtual IList<VoucherConfiguration> Configurations { get; set; }
+        #region navigation
+        public virtual Product Product { get; set; }
+        public virtual IList<ProductVersion> ProductVersions { get; set; }
         #endregion
     }
 }

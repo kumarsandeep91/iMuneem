@@ -32,7 +32,6 @@ namespace Russet.iMuneem.Finance
         public bool IsDefault { get; set; }
 
         #region Navigation Properties
-        public virtual FinancialBook FinancialBook { get; set; }
         public virtual Company Company { get; set; }
         #endregion
     }

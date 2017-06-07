@@ -1,24 +1,13 @@
 ﻿using Russet.iMuneem.Base;
-using Russet.iMuneem.Organization;
-using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace Russet.iMuneem.Communications
 {
     public class Contact : DomainObject
     {
-
-        /*
-         * ID's for relationships in database tables.
-         */
-        public Guid? CompanyID { get; set; }
-        public Guid? TypeID { get; set; }
-
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
         /// <value>The name.</value>
-        [Required(ErrorMessage = "The Name is a mandatory field.")]
         public string Name { get; set; }
 
         /// <summary>
@@ -31,7 +20,6 @@ namespace Russet.iMuneem.Communications
         /// Gets or sets the number.
         /// </summary>
         /// <value>The number.</value>
-        [Required(ErrorMessage = "The Number is a mandatory field.")]
         public string Number { get; set; }
 
         ///<summary>
@@ -55,9 +43,9 @@ namespace Russet.iMuneem.Communications
         }
 
         #region Navigation Properties
-        public virtual Company Company { get; set; }
-        public virtual ContactType Type { get; set; }
 
+        // Navigation Property
+        
         #endregion
     }
 }

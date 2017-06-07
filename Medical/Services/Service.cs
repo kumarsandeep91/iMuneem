@@ -1,12 +1,15 @@
 ﻿using Russet.iMuneem.Base;
-using System.Collections.Generic;
+using System;
 
-namespace Russet.iMuneem.Transactions
+namespace Russet.iMuneem.Medical.Services
 {
-    public class VoucherType : DomainObject
+    public class Service : DomainObject
     {
+        public Guid? CategoryID { get; set; }
         public string Name { get; set; }
-        public string Abbrebiation { get; set; }
+        public string Description { get; set; }
+
+        public double Cost { get; set; }
 
         ///<summary>
         ///Gets or sets a value indicating whether this instance is valid.
@@ -16,12 +19,12 @@ namespace Russet.iMuneem.Transactions
         {
             get
             {
-                return Validate<VoucherType>();
+                return Validate<Service>();
             }
         }
 
-        #region Navigation Properties
-        public virtual IList<Voucher> Vouchers { get; set; }
+        #region navigation
+        public virtual ServiceCategory Category { get; set; }
         #endregion
     }
 }
